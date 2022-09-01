@@ -1,0 +1,564 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5B438A7028A7C89D005CD6F8 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B438A6F28A7C89D005CD6F8 /* MainMenu.xib */; };
+		A25CFFF32194BD2800D5BCF0 /* FxPlug.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = A269F1B02137166F00C92AF9 /* FxPlug.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A269F1B12137166F00C92AF9 /* FxPlug.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A269F1B02137166F00C92AF9 /* FxPlug.framework */; };
+		A2AAD4C42135F6D000B27138 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2AAD4C32135F6D000B27138 /* Cocoa.framework */; };
+		A2AAD4CB2135F6D000B27138 /* VoxTitle Plugin.pluginkit in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = A2AAD4CA2135F6D000B27138 /* VoxTitle Plugin.pluginkit */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A2AAD5282135FAEC00B27138 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AAD5272135FAEC00B27138 /* AppDelegate.swift */; };
+		A2BAE1DB21373A56002D9451 /* VoxTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AAD56121360B8200B27138 /* VoxTitle.swift */; };
+		A2BAE1DD21373F4E002D9451 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AAD55D2136026500B27138 /* main.swift */; };
+		D6CB87E6227BA68200D62141 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2AAD4CE2135F6D000B27138 /* Foundation.framework */; };
+		D6CB87E7227BA69200D62141 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2AAD4D22135F6D000B27138 /* Accelerate.framework */; };
+		D6CB87E8227BA69D00D62141 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2AAD4D02135F6D000B27138 /* AppKit.framework */; };
+		D6CB87EA227BA71200D62141 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2AAD4C32135F6D000B27138 /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A2AAD4CC2135F6D000B27138 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A2AAD4B82135F6D000B27138 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A2AAD4C92135F6D000B27138;
+			remoteInfo = "XPC Service";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A2AAD51D2135F6D000B27138 /* Embed PlugIns */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A2AAD4CB2135F6D000B27138 /* VoxTitle Plugin.pluginkit in Embed PlugIns */,
+			);
+			name = "Embed PlugIns";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2AAD5242135F9C700B27138 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A25CFFF32194BD2800D5BCF0 /* FxPlug.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		5B438A6F28A7C89D005CD6F8 /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		5B9CA1D628C13C9700802E92 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		A269F1B02137166F00C92AF9 /* FxPlug.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FxPlug.framework; path = /Library/Developer/Frameworks/FxPlug.framework; sourceTree = "<absolute>"; };
+		A269F1B22137168A00C92AF9 /* PluginManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PluginManager.framework; path = /Library/Developer/Frameworks/PluginManager.framework; sourceTree = "<absolute>"; };
+		A2AAD4C02135F6D000B27138 /* VoxTitle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoxTitle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2AAD4C32135F6D000B27138 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		A2AAD4CA2135F6D000B27138 /* VoxTitle Plugin.pluginkit */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "VoxTitle Plugin.pluginkit"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2AAD4CE2135F6D000B27138 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A2AAD4D02135F6D000B27138 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		A2AAD4D22135F6D000B27138 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		A2AAD4EF2135F6D000B27138 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Info.plist; sourceTree = "<group>"; };
+		A2AAD4F92135F6D000B27138 /* SandboxEntitlements.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SandboxEntitlements.entitlements; sourceTree = "<group>"; };
+		A2AAD5022135F6D000B27138 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Info.plist; sourceTree = "<group>"; };
+		A2AAD5262135FAEC00B27138 /* Wrapper-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Wrapper-Bridging-Header.h"; sourceTree = "<group>"; };
+		A2AAD5272135FAEC00B27138 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A2AAD55C2136026400B27138 /* Plugin-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Plugin-Bridging-Header.h"; sourceTree = "<group>"; };
+		A2AAD55D2136026500B27138 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		A2AAD56121360B8200B27138 /* VoxTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoxTitle.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A2AAD4BD2135F6D000B27138 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2AAD4C42135F6D000B27138 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2AAD4C62135F6D000B27138 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6CB87E8227BA69D00D62141 /* AppKit.framework in Frameworks */,
+				D6CB87E7227BA69200D62141 /* Accelerate.framework in Frameworks */,
+				D6CB87E6227BA68200D62141 /* Foundation.framework in Frameworks */,
+				A269F1B12137166F00C92AF9 /* FxPlug.framework in Frameworks */,
+				D6CB87EA227BA71200D62141 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A2AAD4B72135F6D000B27138 = {
+			isa = PBXGroup;
+			children = (
+				A2AAD4E72135F6D000B27138 /* VoxTitle */,
+				5B9CA1D628C13C9700802E92 /* README.md */,
+				A2AAD4C22135F6D000B27138 /* Frameworks */,
+				A2AAD4C12135F6D000B27138 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A2AAD4C12135F6D000B27138 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A2AAD4C02135F6D000B27138 /* VoxTitle.app */,
+				A2AAD4CA2135F6D000B27138 /* VoxTitle Plugin.pluginkit */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A2AAD4C22135F6D000B27138 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A269F1B22137168A00C92AF9 /* PluginManager.framework */,
+				A269F1B02137166F00C92AF9 /* FxPlug.framework */,
+				A2AAD4C32135F6D000B27138 /* Cocoa.framework */,
+				A2AAD4CE2135F6D000B27138 /* Foundation.framework */,
+				A2AAD4D02135F6D000B27138 /* AppKit.framework */,
+				A2AAD4D22135F6D000B27138 /* Accelerate.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A2AAD4E72135F6D000B27138 /* VoxTitle */ = {
+			isa = PBXGroup;
+			children = (
+				A2AAD4FB2135F6D000B27138 /* Plugin */,
+				A2AAD4E82135F6D000B27138 /* Wrapper */,
+			);
+			path = VoxTitle;
+			sourceTree = "<group>";
+		};
+		A2AAD4E82135F6D000B27138 /* Wrapper */ = {
+			isa = PBXGroup;
+			children = (
+				A2AAD5272135FAEC00B27138 /* AppDelegate.swift */,
+				A2AAD4EF2135F6D000B27138 /* Info.plist */,
+				5B438A6F28A7C89D005CD6F8 /* MainMenu.xib */,
+				A2AAD4F92135F6D000B27138 /* SandboxEntitlements.entitlements */,
+				A2AAD5262135FAEC00B27138 /* Wrapper-Bridging-Header.h */,
+			);
+			path = Wrapper;
+			sourceTree = "<group>";
+		};
+		A2AAD4FB2135F6D000B27138 /* Plugin */ = {
+			isa = PBXGroup;
+			children = (
+				A2AAD5022135F6D000B27138 /* Info.plist */,
+				A2AAD55D2136026500B27138 /* main.swift */,
+				A2AAD55C2136026400B27138 /* Plugin-Bridging-Header.h */,
+				A2AAD56121360B8200B27138 /* VoxTitle.swift */,
+			);
+			path = Plugin;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A2AAD4BF2135F6D000B27138 /* Wrapper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2AAD51E2135F6D000B27138 /* Build configuration list for PBXNativeTarget "Wrapper" */;
+			buildPhases = (
+				A2AAD4BC2135F6D000B27138 /* Sources */,
+				A2AAD4BD2135F6D000B27138 /* Frameworks */,
+				A2AAD4BE2135F6D000B27138 /* Resources */,
+				A2AAD51D2135F6D000B27138 /* Embed PlugIns */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A2AAD4CD2135F6D000B27138 /* PBXTargetDependency */,
+			);
+			name = Wrapper;
+			productName = "Wrapper Application";
+			productReference = A2AAD4C02135F6D000B27138 /* VoxTitle.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A2AAD4C92135F6D000B27138 /* Plugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2AAD51A2135F6D000B27138 /* Build configuration list for PBXNativeTarget "Plugin" */;
+			buildPhases = (
+				A2AAD4C52135F6D000B27138 /* Sources */,
+				A2AAD4C62135F6D000B27138 /* Frameworks */,
+				A2AAD4C72135F6D000B27138 /* Resources */,
+				A2AAD5242135F9C700B27138 /* Copy Frameworks */,
+				D6C824402457C2EE00D9C626 /* Copy and Code Sign PluginManager.framework */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Plugin;
+			productName = "XPC Service";
+			productReference = A2AAD4CA2135F6D000B27138 /* VoxTitle Plugin.pluginkit */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A2AAD4B82135F6D000B27138 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Example Co.";
+				TargetAttributes = {
+					A2AAD4BF2135F6D000B27138 = {
+						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1130;
+					};
+					A2AAD4C92135F6D000B27138 = {
+						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1130;
+					};
+				};
+			};
+			buildConfigurationList = A2AAD4BB2135F6D000B27138 /* Build configuration list for PBXProject "VoxTitle" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A2AAD4B72135F6D000B27138;
+			productRefGroup = A2AAD4C12135F6D000B27138 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A2AAD4BF2135F6D000B27138 /* Wrapper */,
+				A2AAD4C92135F6D000B27138 /* Plugin */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A2AAD4BE2135F6D000B27138 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B438A7028A7C89D005CD6F8 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2AAD4C72135F6D000B27138 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D6C824402457C2EE00D9C626 /* Copy and Code Sign PluginManager.framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Copy and Code Sign PluginManager.framework";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "mkdir -p \"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\nrsync --archive --links --whole-file --no-owner --no-group --checksum --exclude='Headers' \"/Library/Developer/Frameworks/PluginManager.framework/\" \"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PluginManager.framework/\"\nif [ \"$?\" -ne 0 ]; then echo \"error: rsync failed; couldn't embed PluginManager.framework\"; exit 1; fi\ncodesign --force --timestamp --options runtime --sign \"${CODE_SIGN_IDENTITY}\" \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/PluginManager.framework\"\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A2AAD4BC2135F6D000B27138 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2AAD5282135FAEC00B27138 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2AAD4C52135F6D000B27138 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2BAE1DD21373F4E002D9451 /* main.swift in Sources */,
+				A2BAE1DB21373A56002D9451 /* VoxTitle.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A2AAD4CD2135F6D000B27138 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A2AAD4C92135F6D000B27138 /* Plugin */;
+			targetProxy = A2AAD4CC2135F6D000B27138 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A2AAD5142135F6D000B27138 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ADDITIONAL_SDKS = /Library/Developer/SDKs/FxPlug.sdk;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					/Library/Frameworks,
+					"$(inherited)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		A2AAD5152135F6D000B27138 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ADDITIONAL_SDKS = /Library/Developer/SDKs/FxPlug.sdk;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					/Library/Frameworks,
+					"$(inherited)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		A2AAD51B2135F6D000B27138 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/VoxTitle/Plugin/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				MACH_O_TYPE = mh_execute;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "VoxTitle Plugin";
+				SWIFT_OBJC_BRIDGING_HEADER = "VoxTitle/Plugin/Plugin-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				WRAPPER_EXTENSION = pluginkit;
+			};
+			name = Debug;
+		};
+		A2AAD51C2135F6D000B27138 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/VoxTitle/Plugin/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				MACH_O_TYPE = mh_execute;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "VoxTitle Plugin";
+				SWIFT_OBJC_BRIDGING_HEADER = "VoxTitle/Plugin/Plugin-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				WRAPPER_EXTENSION = pluginkit;
+			};
+			name = Release;
+		};
+		A2AAD51F2135F6D000B27138 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = VoxTitle/Wrapper/SandboxEntitlements.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/VoxTitle/Wrapper/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = VoxTitle;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "VoxTitle/Wrapper/Wrapper-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A2AAD5202135F6D000B27138 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = VoxTitle/Wrapper/SandboxEntitlements.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/VoxTitle/Wrapper/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = VoxTitle;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "VoxTitle/Wrapper/Wrapper-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A2AAD4BB2135F6D000B27138 /* Build configuration list for PBXProject "VoxTitle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2AAD5142135F6D000B27138 /* Debug */,
+				A2AAD5152135F6D000B27138 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A2AAD51A2135F6D000B27138 /* Build configuration list for PBXNativeTarget "Plugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2AAD51B2135F6D000B27138 /* Debug */,
+				A2AAD51C2135F6D000B27138 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A2AAD51E2135F6D000B27138 /* Build configuration list for PBXNativeTarget "Wrapper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2AAD51F2135F6D000B27138 /* Debug */,
+				A2AAD5202135F6D000B27138 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A2AAD4B82135F6D000B27138 /* Project object */;
+}
